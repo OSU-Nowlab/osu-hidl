@@ -1,0 +1,20 @@
+[submodule "frameworks/deepspeed"]
+	path = frameworks/deepspeed
+	url = https://github.com/OSU-Nowlab/DeepSpeed.git
+	branch = nowlab-main
+[submodule "frameworks/sglang"]
+	path = frameworks/sglang
+	url = https://github.com/OSU-Nowlab/sglang.git
+	branch = nowlab-main
+[submodule "frameworks/pytorch"]
+	path = frameworks/pytorch
+	url = https://github.com/OSU-Nowlab/pytorch.git
+	branch = hpc_ai_v1.0
+[submodule "frameworks/vllm"]
+	path = frameworks/vllm
+	url = https://github.com/OSU-Nowlab/vllm.git
+	branch = nowlab-main
+[submodule "frameworks/mcr-dl"]
+	path = frameworks/mcr-dl
+	url = https://github.com/OSU-Nowlab/MCR-DL.git
+	branch = main

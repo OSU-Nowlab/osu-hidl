@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "numpy"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "osu-hpc-ai"
+version = "0.1.0"
+description = "OSU High-Performance Inference and Deep Learning Stack"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.8"
+authors = [
+    {name = "Network-Based Computing Laboratory", email = "hidl-support@cse.ohio-state.edu"}
+]
+keywords = ["deep-learning", "distributed-training", "mpi", "cuda", "hpc"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-timeout",
+]
+
+[project.urls]
+Homepage = "https://hpc-ai.engineering.osu.edu"
+Repository = "https://github.com/OSU-Nowlab/osu-hpc-ai"
+Documentation = "https://github.com/OSU-Nowlab/osu-hpc-ai#readme"
+Issues = "https://github.com/OSU-Nowlab/osu-hpc-ai/issues"
+
+[tool.setuptools.packages.find]
+include = ["hpc_ai*"]

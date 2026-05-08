@@ -1,0 +1,51 @@
+repos:
+-   repo: meta
+    hooks:
+    -   id: check-hooks-apply
+    -   id: check-useless-excludes
+
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+    -   id: check-case-conflict
+    -   id: check-json
+    -   id: check-symlinks
+    -   id: check-yaml
+    -   id: destroyed-symlinks
+    -   id: check-added-large-files
+        args: ['--maxkb=1000']
+    -   id: end-of-file-fixer
+        exclude: ^frameworks/
+    -   id: fix-byte-order-marker
+        exclude: ^frameworks/
+    -   id: mixed-line-ending
+        args: [--fix=lf]
+        exclude: ^frameworks/
+    -   id: requirements-txt-fixer
+        exclude: ^frameworks/
+    -   id: trailing-whitespace
+        exclude: ^frameworks/
+
+-   repo: https://github.com/google/yapf
+    rev: v0.40.0
+    hooks:
+    -   id: yapf
+        exclude: ^frameworks/
+
+-   repo: https://github.com/pycqa/flake8
+    rev: 7.0.0
+    hooks:
+    -   id: flake8
+        exclude: ^frameworks/
+        args: ['--config=.flake8']
+
+-   repo: https://github.com/codespell-project/codespell
+    rev: v2.2.6
+    hooks:
+    -   id: codespell
+        exclude: ^frameworks/
+        args: [
+            '--skip=*.json,*.pt,*.bin,*.png,*.jpg',
+            '--ignore-regex=\\n',
+            --check-filenames,
+        ]
